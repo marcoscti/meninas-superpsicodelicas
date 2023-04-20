@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbfbfb;
+  color: #2d2d2d;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+section {
+  margin: 30px 0;
+}
+
+header {
+  background: #0a6a5a;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header .content nav ul {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+header .content nav ul li {
+  list-style: none;
+}
+header .content nav ul li a {
+  height: 40px;
+  width: 50px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 20px;
+  border: 1px solid #fbfbfb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+header .content nav ul li .home {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg viewBox='0 0 576 512' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: center;
+  background-position-y: center;
+}
+header .content nav ul li .home:hover {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg viewBox='0 0 576 512' fill='%23555' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z'/%3E%3C/svg%3E");
+}
+header .content nav ul li .cart {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg id='Layer_1' fill='%23fff' style='enable-background:new 1 -1 100 100;' version='1.1' viewBox='1 -1 100 100' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle/%3E%3Cg%3E%3Cpath d='M74,70.7c-5.7,0-10.4,4.6-10.4,10.4c0,5.7,4.6,10.4,10.4,10.4c5.7,0,10.4-4.6,10.4-10.4c0,0,0,0,0,0 C84.3,75.4,79.7,70.7,74,70.7z'/%3E%3Cpath d='M92.3,21.1c-0.2,0-0.5-0.1-0.8-0.1H28.5l-1-6.7c-0.6-4.4-4.4-7.7-8.9-7.7h-8.1c-2.2,0-4,1.8-4,4s1.8,4,4,4h8.1 c0.5,0,0.9,0.4,1,0.9l6.2,42.2C26.6,63,31.2,67,36.6,67h41.6c5.2,0,9.7-3.7,10.8-8.8l6.5-32.5C95.9,23.6,94.5,21.5,92.3,21.1z'/%3E%3Cpath d='M38.2,70.7C32.4,71,28,75.8,28.2,81.5c0.2,5.5,4.7,9.9,10.2,9.9h0.2c5.7-0.3,10.2-5.1,9.9-10.8 C48.3,75.1,43.7,70.7,38.2,70.7z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position-x: center;
+  background-position-y: center;
+}
+header .content nav ul li .cart:hover {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg id='Layer_1' fill='%23555' style='enable-background:new 1 -1 100 100;' version='1.1' viewBox='1 -1 100 100' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle/%3E%3Cg%3E%3Cpath d='M74,70.7c-5.7,0-10.4,4.6-10.4,10.4c0,5.7,4.6,10.4,10.4,10.4c5.7,0,10.4-4.6,10.4-10.4c0,0,0,0,0,0 C84.3,75.4,79.7,70.7,74,70.7z'/%3E%3Cpath d='M92.3,21.1c-0.2,0-0.5-0.1-0.8-0.1H28.5l-1-6.7c-0.6-4.4-4.4-7.7-8.9-7.7h-8.1c-2.2,0-4,1.8-4,4s1.8,4,4,4h8.1 c0.5,0,0.9,0.4,1,0.9l6.2,42.2C26.6,63,31.2,67,36.6,67h41.6c5.2,0,9.7-3.7,10.8-8.8l6.5-32.5C95.9,23.6,94.5,21.5,92.3,21.1z'/%3E%3Cpath d='M38.2,70.7C32.4,71,28,75.8,28.2,81.5c0.2,5.5,4.7,9.9,10.2,9.9h0.2c5.7-0.3,10.2-5.1,9.9-10.8 C48.3,75.1,43.7,70.7,38.2,70.7z'/%3E%3C/g%3E%3C/svg%3E");
+}
+header .content nav ul li a:hover {
+  color: #0a6a5a;
+  background-color: #fbfbfb;
+}
+
+.banner {
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 460px;
+  position: relative;
+}
+.banner img {
+  width: 100%;
+  object-fit: cover;
+  height: 460px;
+}
+.banner .conteudo-banner {
+  position: absolute;
+  background-color: #fff;
+  width: 500px;
+  margin-left: 35%;
+  margin-top: 10%;
+  padding: 10px;
+}
+.banner .conteudo-banner h1 {
+  font-size: 52px;
+}
+.banner .conteudo-banner p {
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+}
+.logo img {
+  height: 100%;
+}
+
+footer {
+  background: #0a6a5a;
+  height: 150px;
+  position: static;
+  bottom: 0;
+}
+
+.list-products {
+  display: flex;
+  margin: 30px 0;
+  column-gap: 25px;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding-bottom: 25px;
+}
+.list-products .product {
+  position: relative;
+  height: 430px;
+}
+.list-products .product .product-link {
+  position: absolute;
+  top: 30px;
+  text-decoration: none;
+  color: #2d2d2d;
+  background-color: #fff;
+  position: relative;
+  width: 250px;
+  height: 400px;
+  border: 1px solid #0a6a5a;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  z-index: 4;
+}
+.list-products .product .product-link .product-image {
+  width: 230px;
+  padding: 5px;
+}
+.list-products .product .product-link .product-image img {
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+.list-products .product .product-link .product-name {
+  margin: 10px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+.list-products .product .product-link .product-price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.list-products .product .product-link .btn-comprar {
+  position: absolute;
+  bottom: 5px;
+}
+.list-products .product .product-link:hover {
+  margin-top: -30px;
+  transition: 1s;
+}
+.list-products .arrows {
+  position: absolute;
+  width: 1120px;
+  z-index: 5;
+  height: 40px;
+  margin-top: 10%;
+}
+.list-products .arrows .arrow-left, .list-products .arrows .arrow-right {
+  position: absolute;
+  padding: 5px;
+  transition: 2ms;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  color: #0a6a5a;
+  cursor: pointer;
+}
+.list-products .arrows .arrow-left {
+  left: -5%;
+}
+.list-products .arrows .arrow-right {
+  right: -5%;
+}
+
+.list-products::-webkit-scrollbar {
+  background-color: transparent;
+  height: 10px;
+}
+
+.list-products::-webkit-scrollbar-thumb {
+  background-color: #0a6a5a;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.btn-success {
+  width: 230px;
+  border: transparent;
+  height: 48px;
+  background-color: #0a6a5a;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  width: 230px;
+  border: 1px solid #0a6a5a;
+  background-color: #fff;
+  color: #0a6a5a;
+}
+
+.products-title {
+  font-size: 32px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
