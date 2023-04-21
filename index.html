@@ -11,7 +11,7 @@
     <header>
       <div class="content container">
         <div class="logo">
-          <a href="#">
+          <a href="index.html">
             <img src="build/img/logo.png" alt="" />
           </a>
         </div>
@@ -38,14 +38,39 @@
         <h1>Compre seu Produto das Super Psicodélicas conosco</h1>
         <div class="products-title"></div>
         <div class="list-products"></div>
-        <div class="products-title"></div>
-        <div class="list-products"></div>
       </div>
     </section>
     <footer>
       <div class="container footer-container"></div>
     </footer>
+    <!-- Minicart -->
+    <div class="minicart-container">
+      <div class="minicart">
+        <div class="minicart-header">
+          <div>Carrinho</div>
+          <button class="btn-close-minicart">&#10060;</button>
+        </div>
+        <div class="minicart-list">
+          <div class="minicart-items">
+            <div class="minicart-thumb">
+              <img src="build/img/chaveiro-lindinha.webp" alt="">
+            </div>
+            <div class="minicart-content">
+              <span>🗑️</span>
+              <p class="minicart-title">Nome do Produto</p>
+              <p class="minicart-price">R$ 79,90</p>
+              <p class="minicart-quantity">
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./build/js/index.js"></script>
     <script src="./build/js/product.js"></script>
+    <script src="./build/js/minicart.js"></script>
   </body>
 </html>
